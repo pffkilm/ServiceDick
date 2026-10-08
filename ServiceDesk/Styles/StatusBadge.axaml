@@ -1,0 +1,21 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="using:ServiceDesk">
+
+    <ControlTheme x:Key="{x:Type local:StatusBadge}"
+                  TargetType="local:StatusBadge">
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border Background="{Binding BadgeBackground, RelativeSource={RelativeSource TemplatedParent}}"
+                        CornerRadius="12"
+                        Padding="12,6">
+                    <TextBlock Text="{Binding Status, RelativeSource={RelativeSource TemplatedParent}}"
+                               Foreground="White"
+                               FontWeight="Bold"
+                               FontSize="13"/>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+    </ControlTheme>
+
+</ResourceDictionary>

@@ -1,0 +1,18 @@
+<NavigationPage xmlns="https://github.com/avaloniaui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                xmlns:wizard="using:ServiceDesk.Views.Wizard"
+                x:Class="ServiceDesk.Views.RequestWizardPage">
+
+
+    <ContentPage Header="Шаг 1: Клиент">
+        <DockPanel>
+            <Button DockPanel.Dock="Bottom"
+                    Content="Далее →"
+                    Click="GoToStep2_Click"
+                    HorizontalAlignment="Left"
+                    Margin="20"/>
+            <wizard:Step1ClientView />
+        </DockPanel>
+    </ContentPage>
+
+</NavigationPage>

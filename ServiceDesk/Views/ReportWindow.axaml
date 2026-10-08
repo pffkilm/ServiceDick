@@ -1,0 +1,37 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="ServiceDesk.Views.ReportWindow"
+        Title="Отчёт за смену"
+        Width="500" Height="400"
+        WindowStartupLocation="CenterOwner">
+
+    <StackPanel Margin="20" Spacing="15">
+
+        <TextBlock Text="Отчёт за смену" Classes="h1"/>
+
+
+        <Border Classes="card"
+                Background="{StaticResource PrimaryBrush}"
+                Padding="15">
+            <StackPanel Spacing="8">
+                <TextBlock Text="Всего заявок: 12"
+                           Foreground="White" FontSize="16"/>
+                <TextBlock Text="Выполнено: 8"
+                           Foreground="White"/>
+                <TextBlock Text="В работе: 4"
+                           Foreground="White"/>
+                <TextBlock Text="Средний чек: 2500 ₽"
+                           Foreground="White"/>
+            </StackPanel>
+        </Border>
+
+
+        <TextBlock Text="Дата: 22.09.2025"
+                   FontStyle="Italic"/>
+
+     
+        <Button Content="Закрыть"
+                Click="Close_Click"
+                HorizontalAlignment="Right"/>
+    </StackPanel>
+</Window>

@@ -1,0 +1,31 @@
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+
+    <SolidColorBrush x:Key="PrimaryBrush" Color="#2D5BFF"/>
+    <SolidColorBrush x:Key="AccentBrush" Color="#FF9F1C"/>
+    <SolidColorBrush x:Key="StatusAcceptedBrush" Color="#9E9E9E"/>
+    <SolidColorBrush x:Key="StatusInWorkBrush" Color="#F0AD4E"/>
+    <SolidColorBrush x:Key="StatusReadyBrush" Color="#5CB85C"/>
+    <SolidColorBrush x:Key="StatusIssuedBrush" Color="#337AB7"/>
+
+
+    <x:String x:Key="AppTitle">СервисДеск</x:String>
+
+
+    <ControlTheme x:Key="{x:Type DrawerPage}" TargetType="DrawerPage">
+        <Setter Property="Template">
+            <ControlTemplate>
+                <SplitView DisplayMode="Overlay"
+                           PanePlacement="Left"
+                           OpenPaneLength="250"
+                           IsPaneOpen="{Binding IsOpen, RelativeSource={RelativeSource TemplatedParent}}"
+                           Pane="{Binding Drawer, RelativeSource={RelativeSource TemplatedParent}}">
+                    <ContentPresenter Content="{Binding Content, RelativeSource={RelativeSource TemplatedParent}}"
+                                      ContentTemplate="{Binding ContentTemplate, RelativeSource={RelativeSource TemplatedParent}}"/>
+                </SplitView>
+            </ControlTemplate>
+        </Setter>
+    </ControlTheme>
+
+</ResourceDictionary>

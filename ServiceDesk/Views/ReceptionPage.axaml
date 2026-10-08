@@ -1,0 +1,25 @@
+<ContentPage xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:views="using:ServiceDesk.Views"
+             x:Class="ServiceDesk.Views.ReceptionPage"
+             Header="Приёмщик">
+    <StackPanel Margin="20" Spacing="15">
+        <TextBlock Text="Добро пожаловать, приёмщик!" Classes="h1"/>
+        <TextBlock Text="Здесь отображаются текущие заявки:"/>
+
+        <views:RequestCard RequestNumber="№123"
+                           ClientName="Иванов И.И."
+                           Status="В работе"
+                           Progress="60"/>
+
+        <views:RequestCard RequestNumber="№124"
+                           ClientName="Петров П.П."
+                           Status="Готова"
+                           Progress="100"/>
+
+        <views:RequestCard RequestNumber="№125"
+                           ClientName="Сидоров С.С."
+                           Status="Принята"
+                           Progress="20"/>
+    </StackPanel>
+</ContentPage>

@@ -1,0 +1,63 @@
+<TabbedPage xmlns="https://github.com/avaloniaui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+            xmlns:views="using:ServiceDesk.Views"
+            xmlns:vm="using:ServiceDesk.ViewModels"
+            xmlns:local="using:ServiceDesk"
+            x:Class="ServiceDesk.Views.RequestCardPage"
+            x:DataType="vm:RequestCardViewModel">
+    
+    <ContentPage Header="Описание">
+        <StackPanel Margin="20" Spacing="15">
+            <TextBlock Text="Описание заявки" Classes="h1"/>
+            <TextBlock Text="Клиент:" FontWeight="Bold"/>
+            <TextBlock Text="{Binding CurrentRequest.ClientName}"/>
+            <TextBlock Text="Устройство:" FontWeight="Bold"/>
+            <TextBlock Text="{Binding CurrentRequest.DeviceModel}"/>
+            <TextBlock Text="Неисправность:" FontWeight="Bold"/>
+            <TextBlock Text="{Binding CurrentRequest.Description}" TextWrapping="Wrap"/>
+
+            <TextBlock Text="Статус заявки:" FontWeight="Bold"/>
+
+            <StackPanel Orientation="Horizontal" Spacing="10">
+                <local:StatusBadge Status="Принята" 
+                                   BadgeBackground="{StaticResource StatusAcceptedBrush}"/>
+                <local:StatusBadge Status="В работе" 
+                                   BadgeBackground="{StaticResource StatusInWorkBrush}"/>
+                <local:StatusBadge Status="Готова" 
+                                   BadgeBackground="{StaticResource StatusReadyBrush}"/>
+                <local:StatusBadge Status="Выдана" 
+                                   BadgeBackground="{StaticResource StatusIssuedBrush}"/>
+            </StackPanel>
+
+        </StackPanel>
+    </ContentPage>
+
+
+    <ContentPage Header="История">
+        <StackPanel Margin="20" Spacing="15">
+            <TextBlock Text="История заявки" Classes="h1"/>
+            <ItemsControl ItemsSource="{Binding CurrentRequest.History}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" Margin="0,3"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+    </ContentPage>
+
+
+    <ContentPage Header="Запчасти">
+        <StackPanel Margin="20" Spacing="15">
+            <TextBlock Text="Список запчастей" Classes="h1"/>
+            <ItemsControl ItemsSource="{Binding CurrentRequest.Parts}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}" Margin="0,3"/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+    </ContentPage>
+
+</TabbedPage>

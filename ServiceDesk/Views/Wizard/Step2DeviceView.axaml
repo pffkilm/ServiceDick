@@ -1,0 +1,16 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="ServiceDesk.Views.Wizard.Step2DeviceView">
+    <StackPanel Margin="20" Spacing="15">
+        <TextBlock Text="Информация об устройстве" Classes="h1"/>
+
+        <TextBlock Text="Модель устройства:"/>
+        <TextBox Text="{Binding DeviceModel}"
+                 Watermark="Samsung Galaxy S21"/>
+
+        <TextBlock Text="Описание неисправности:"/>
+        <TextBox Text="{Binding Description}"
+                 Watermark="Не включается..."
+                 AcceptsReturn="True" Height="80"/>
+    </StackPanel>
+</UserControl>

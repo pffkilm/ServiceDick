@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="ServiceDesk/App.axaml" value="ServiceDesk/ServiceDesk.csproj" />
+        <entry key="ServiceDesk/Resources/AppResources.axaml" value="ServiceDesk/ServiceDesk.csproj" />
+        <entry key="ServiceDesk/Styles/AppStyles.axaml" value="ServiceDesk/ServiceDesk.csproj" />
+        <entry key="ServiceDesk/Styles/StatusBadge.axaml" value="ServiceDesk/ServiceDesk.csproj" />
+        <entry key="ServiceDesk/Views/CatalogPage.axaml" value="ServiceDesk/ServiceDesk.csproj" />
+        <entry key="ServiceDesk/Views/MainView.axaml" value="ServiceDesk/ServiceDesk.csproj" />
+        <entry key="ServiceDesk/Views/MainWindow.axaml" value="ServiceDesk/ServiceDesk.csproj" />
+        <entry key="ServiceDesk/Views/ReceptionPage.axaml" value="ServiceDesk/ServiceDesk.csproj" />
+        <entry key="ServiceDesk/Views/ReportWindow.axaml" value="ServiceDesk/ServiceDesk.csproj" />
+        <entry key="ServiceDesk/Views/RequestCard.axaml" value="ServiceDesk/ServiceDesk.csproj" />
+        <entry key="ServiceDesk/Views/RequestCardPage.axaml" value="ServiceDesk/ServiceDesk.csproj" />
+        <entry key="ServiceDesk/Views/RequestWizardPage.axaml" value="ServiceDesk/ServiceDesk.csproj" />
+        <entry key="ServiceDesk/Views/Wizard/Step1ClientView.axaml" value="ServiceDesk/ServiceDesk.csproj" />
+        <entry key="ServiceDesk/Views/Wizard/Step2DeviceView.axaml" value="ServiceDesk/ServiceDesk.csproj" />
+        <entry key="ServiceDesk/Views/Wizard/Step3CostView.axaml" value="ServiceDesk/ServiceDesk.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
